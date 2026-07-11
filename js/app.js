@@ -156,7 +156,8 @@ function fullDoc(lesson, title, artist) {
   const inner = document.querySelector('#lesson .lesson').outerHTML;
   return `<!doctype html><html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"><title>${escapeHtml(title)}</title>
-<style>body{margin:0;background:#f6f1e7;color:#20232f;font-family:"Segoe UI",system-ui,sans-serif;line-height:1.55}
+<style>body{margin:0;background:#0c0d15;color:#eaecf5;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;line-height:1.55}
 .wrap{max-width:820px;margin:0 auto;padding:18px}${LESSON_CSS}${HERO_CSS}</style></head>
 <body><div class="wrap">${inner}</div>${SAY_JS}</body></html>`;
 }
@@ -239,13 +240,16 @@ function wireUi() {
   });
 }
 
-const HERO_CSS = `.lhero{display:flex;gap:14px;align-items:center;margin:0 0 18px;padding:18px 18px;
-  background:linear-gradient(135deg,#242a5e,#2b3168 55%,#3a3f7a);color:#f4efe4;border-radius:15px;}
-.lseal{width:52px;height:52px;border-radius:10px;background:#b5443a;display:flex;align-items:center;justify-content:center;
-  font-size:1.9rem;font-family:"Nanum Myeongjo",serif;color:#fbeee5;flex:none;box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);}
-.lhero h1{margin:.1em 0;font-size:1.5rem;font-family:"Nanum Myeongjo",Georgia,serif;}
-.lkick{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:#c7c2e6;}
-.lsub{color:#cdbfe0;font-size:.92rem;}`;
+const HERO_CSS = `.lhero{display:flex;gap:14px;align-items:center;margin:0 0 20px;padding:18px 18px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,rgba(139,147,255,.16),rgba(169,139,255,.09) 60%,transparent),#161826;
+  border:1px solid rgba(255,255,255,.07);border-radius:16px;}
+.lseal{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex:none;
+  font-size:1.9rem;font-family:'Nanum Myeongjo','Apple SD Gothic Neo',sans-serif;color:#fff;
+  background:linear-gradient(140deg,#8b93ff,#a98bff);box-shadow:0 6px 20px -4px rgba(139,147,255,.55),inset 0 0 0 1px rgba(255,255,255,.22);}
+.lhero h1{margin:.08em 0;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;color:#eaecf5;
+  font-family:'Inter','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;}
+.lkick{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:#8b93ff;font-weight:600;}
+.lsub{color:#a0a4bd;font-size:.92rem;}`;
 
 const SAY_JS = `<script>(function(){var v=null;function pk(){if(!window.speechSynthesis)return;var s=speechSynthesis.getVoices()||[];
 v=s.find(function(x){return x.lang&&x.lang.toLowerCase().indexOf('ko')===0})||null;}

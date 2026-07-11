@@ -6,4 +6,5 @@
 *.dict binary
 *.txt binary
 *.png binary
+*.woff2 binary
 model/** binary
