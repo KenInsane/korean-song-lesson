@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Корейский по песням</title>
+<meta name="theme-color" content="#2b3168">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<style>
+:root{--paper:#f6f1e7;--ink:#20232f;--ink2:#3a3f52;--indigo:#2b3168;--indigo2:#3a3f7a;
+  --seal:#b5443a;--line:#d8cdb4;--gold:#a9852f;}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(900px 500px at 90% -10%,#fbf7ee,transparent 60%),var(--paper);
+  color:var(--ink);font-family:"Segoe UI","Pretendard",system-ui,-apple-system,sans-serif;line-height:1.5;
+  -webkit-text-size-adjust:100%;}
+.wrap{max-width:820px;margin:0 auto;padding:14px 14px 60px;}
+header.top{display:flex;gap:12px;align-items:center;padding:16px 16px;border-radius:15px;
+  background:linear-gradient(135deg,#242a5e,#2b3168 55%,#3a3f7a);color:#f4efe4;position:relative;overflow:hidden;}
+.seal{width:48px;height:48px;border-radius:10px;background:var(--seal);display:flex;align-items:center;
+  justify-content:center;font-size:1.7rem;font-family:"Nanum Myeongjo",serif;color:#fbeee5;flex:none;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);}
+header.top h1{margin:0;font-size:1.25rem;font-family:"Nanum Myeongjo",Georgia,serif;}
+header.top .k{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#c7c2e6;}
+.panel{background:#fffdf8;border:1px solid var(--line);border-radius:14px;padding:15px 15px;margin-top:14px;}
+textarea{width:100%;min-height:150px;padding:11px;border:1px solid var(--line);border-radius:10px;
+  font-family:"Nanum Myeongjo","Noto Serif KR",serif;font-size:1.05rem;resize:vertical;background:#fff;color:var(--ink);}
+textarea.drag{border-color:var(--indigo);background:#f3f0fa;}
+.row{display:flex;gap:10px;margin-top:11px;flex-wrap:wrap;}
+.row .f{flex:1;min-width:120px;}
+label{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gold);margin-bottom:3px;}
+input[type=text],input[type=number]{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:9px;
+  background:#fff;color:var(--ink);font-size:1rem;}
+.opts{display:flex;gap:10px;margin-top:11px;}.opts .f{flex:1;}
+button.fetch{margin-top:10px;width:100%;padding:9px;border:1px solid var(--indigo);border-radius:9px;cursor:pointer;
+  background:#fff;color:var(--indigo);font-size:.9rem;}
+.fetchnote{font-size:.8rem;color:var(--ink2);margin-top:6px;min-height:1em;}
+.fetchnote .warn{color:var(--gold);}
+button.go{margin-top:13px;width:100%;padding:14px;border:0;border-radius:12px;cursor:pointer;
+  background:linear-gradient(135deg,var(--indigo),var(--indigo2));color:#fff;font-size:1.08rem;font-weight:600;}
+button.go:disabled{opacity:.5;cursor:progress;}
+.hint{font-size:.78rem;color:var(--ink2);margin-top:9px;}
+.samples{margin-top:12px;font-size:.82rem;color:var(--ink2);}
+.samples a{color:var(--indigo);cursor:pointer;text-decoration:underline;}
+.statusbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:16px 2px 8px;flex-wrap:wrap;}
+.statusbar .st{font-size:.82rem;color:var(--ink2);flex:1;}
+#dls{display:flex;gap:8px;flex-wrap:wrap;}
+.dl{padding:8px 12px;border:1px solid var(--indigo);color:var(--indigo);background:#fff;border-radius:9px;cursor:pointer;font-size:.82rem;}
+.dl:active{background:var(--indigo);color:#fff;}
+#lesson{margin-top:4px;}
+.err{color:var(--seal);padding:13px;border:1px solid var(--seal);border-radius:10px;background:#fdeeec;}
+.foot{margin-top:28px;font-size:.76rem;color:#a89f89;text-align:center;}
+#loading{position:fixed;inset:0;background:rgba(43,49,104,.96);color:#f4efe4;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:28px;z-index:99;}
+#loading.hidden{display:none;}
+#loading .sp{width:38px;height:38px;border:3px solid #fff5;border-top-color:#fff;border-radius:50%;animation:sp 0.8s linear infinite;margin-bottom:18px;}
+#loading .bigseal{font-size:2.4rem;margin-bottom:6px;font-family:"Nanum Myeongjo",serif;}
+@keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div id="loading">
+  <div class="bigseal">學</div>
+  <div class="sp"></div>
+  <div id="loading-msg">Инициализация…</div>
+</div>
+
+<script>
+// Показываем ЛЮБУЮ ошибку прямо на экране (чтобы было видно, где встаёт загрузка).
+window.__kslErr = function (msg) {
+  var el = document.getElementById('loading-msg');
+  if (el) el.innerHTML = '<b style="color:#ffd6cf">Не удалось загрузить</b><br>' +
+    '<span style="font-size:.78em;word-break:break-word;display:block;margin-top:8px">' + String(msg) + '</span>' +
+    '<span style="font-size:.72em;opacity:.85;display:block;margin-top:12px">Пришли мне этот текст — починю.</span>';
+};
+window.addEventListener('error', function (e) {
+  var m = (e && e.message) ? e.message : 'script error';
+  if (e && e.filename) m += '  @ ' + e.filename.split('/').pop() + ':' + (e.lineno || '?');
+  window.__kslErr(m);
+});
+window.addEventListener('unhandledrejection', function (e) {
+  var r = e && e.reason; window.__kslErr('promise: ' + ((r && (r.stack || r.message)) || r || '?'));
+});
+
+// (0) Лечим залипший service worker от прошлых заливок (частая причина «сеть/ошибка»):
+//     сносим все SW + кэши и ОДИН раз перезагружаемся — дальше страница работает без SW.
+(function cleanupSW() {
+  try {
+    if (!('serviceWorker' in navigator) || !navigator.serviceWorker.getRegistrations) return;
+    navigator.serviceWorker.getRegistrations().then(function (rs) {
+      var hadSW = rs.length > 0 || (navigator.serviceWorker.controller != null);
+      if (hadSW && !sessionStorage.getItem('ksl_swclean')) {
+        sessionStorage.setItem('ksl_swclean', '1');
+        var el = document.getElementById('loading-msg'); if (el) el.textContent = 'Чиню кэш…';
+        Promise.all(rs.map(function (r) { return r.unregister(); })).then(function () {
+          var done = function () { location.reload(); };
+          if (window.caches && caches.keys) {
+            caches.keys().then(function (ks) { return Promise.all(ks.map(function (k) { return caches.delete(k); })); }).then(done, done);
+          } else { done(); }
+        }, done);
+      }
+    }).catch(function () {});
+  } catch (e) { /* ignore */ }
+})();
+
+// Сторож: если app.js не запустился за 7 сек — показываем настоящую причину.
+window.__kslBooted = false;
+setTimeout(function () {
+  if (window.__kslBooted) return;
+  var files = ['js/app.js', 'lib/index.js', 'lib/build/kiwi-wasm.js', 'data/grammar_db.json'];
+  var out = ['origin: ' + location.origin,
+    'SW активен: ' + (navigator.serviceWorker && navigator.serviceWorker.controller ? 'ДА (перезагрузи!)' : 'нет')];
+  var left = files.length;
+  files.forEach(function (f) {
+    fetch(new URL(f, location.href).href, { cache: 'no-store' }).then(function (r) {
+      var ct = (r.headers.get('content-type') || '?').split(';')[0];
+      out.push(f.split('/').pop() + ': ' + r.status + ' ' + ct);
+    }).catch(function (err) {
+      out.push(f.split('/').pop() + ': ' + (err && err.name ? err.name + ' — ' + (err.message || '') : 'reject'));
+    }).then(function () {
+      if (--left === 0 && !window.__kslBooted) {
+        window.__kslErr('app.js не запустился.<br><span style="font-size:.8em;line-height:1.7;word-break:break-word">' + out.join('<br>') + '</span>');
+      }
+    });
+  });
+}, 7000);
+</script>
+
+<div class="wrap">
+  <header class="top">
+    <div class="seal">學</div>
+    <div><div class="k">노래로 배우는 한국어</div><h1>Корейский по песням</h1></div>
+  </header>
+
+  <div class="panel">
+    <textarea id="text" placeholder="Вставь текст корейской песни (или перетащи .txt)…"></textarea>
+    <div class="row">
+      <div class="f"><label>Название</label><input type="text" id="title" placeholder="첫눈"></div>
+      <div class="f"><label>Исполнитель</label><input type="text" id="artist" placeholder="—"></div>
+    </div>
+    <button class="fetch" id="fetch">🔎 Найти текст по названию</button>
+    <div class="fetchnote" id="fetchnote"></div>
+    <div class="opts">
+      <div class="f"><label>Граммат.</label><input type="number" id="grammar" value="2" min="1" max="5"></div>
+      <div class="f"><label>Слов</label><input type="number" id="words" value="12" min="4" max="30"></div>
+      <div class="f"><label>Строк</label><input type="number" id="keylines" value="6" min="0" max="14"></div>
+    </div>
+    <button class="go" id="go" disabled>Разобрать песню</button>
+    <div class="hint">Всё работает на телефоне офлайн. Текст никуда не отправляется. 🔊 — озвучка.</div>
+    <div class="samples">Примеры: <a data-s="cheotnun">첫눈 (демо)</a> · <a data-s="arirang">아리랑</a></div>
+  </div>
+
+  <div class="statusbar">
+    <div class="st" id="status">Движок загружается…</div>
+    <div id="dls"></div>
+  </div>
+  <div id="lesson"></div>
+
+  <div class="foot">KoreanSongLesson · разбор корейского в браузере (Kiwi WASM)</div>
+</div>
+
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>

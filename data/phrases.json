@@ -1,0 +1,578 @@
+[
+ {
+  "phrase": "사랑해(요)",
+  "romanization": "saranghae(yo)",
+  "ru": "Я тебя люблю",
+  "literal_ru": "люблю",
+  "register": "casual (반말) / polite (존댓말)",
+  "note_ru": "사랑하다 «любить» → 사랑해; местоимение и объект опущены, ясны из контекста. Вежливо +요."
+ },
+ {
+  "phrase": "보고 싶어(요)",
+  "romanization": "bogo sipeo(yo)",
+  "ru": "Скучаю по тебе / хочу увидеть тебя",
+  "literal_ru": "видеть хочу",
+  "register": "casual (반말) / polite (존댓말)",
+  "note_ru": "-고 싶다 «хотеть сделать»; 보다 «видеть» → «хочу увидеть» = «скучаю»."
+ },
+ {
+  "phrase": "보고 싶다",
+  "romanization": "bogo sipda",
+  "ru": "Как же я скучаю / хочу тебя видеть",
+  "literal_ru": "видеть хочу(-)",
+  "register": "casual (반말)",
+  "note_ru": "Словарная форма на -다 звучит как восклицание, разговор с самим собой."
+ },
+ {
+  "phrase": "괜찮아(요)",
+  "romanization": "gwaenchana(yo)",
+  "ru": "Всё хорошо / ничего страшного",
+  "literal_ru": "в порядке",
+  "register": "casual (반말) / polite (존댓말)",
+  "note_ru": "괜찮다 «быть в порядке»; по интонации — и вопрос «ты как?», и утешение."
+ },
+ {
+  "phrase": "미안해",
+  "romanization": "mianhae",
+  "ru": "Прости / извини",
+  "literal_ru": "виноват(а)",
+  "register": "casual (반말)",
+  "note_ru": "미안하다 «сожалеть»; вежливо 미안해요, официально 죄송해요."
+ },
+ {
+  "phrase": "고마워",
+  "romanization": "gomawo",
+  "ru": "Спасибо",
+  "literal_ru": "благодарен(на)",
+  "register": "casual (반말)",
+  "note_ru": "고맙다 (ㅂ-неправильный глагол) → 고마워; вежливо 고마워요."
+ },
+ {
+  "phrase": "잊지 마",
+  "romanization": "itji ma",
+  "ru": "Не забывай",
+  "literal_ru": "забывать не (делай)",
+  "register": "casual (반말)",
+  "note_ru": "-지 마(라) — запрет; 잊다 «забыть»."
+ },
+ {
+  "phrase": "가지 마",
+  "romanization": "gaji ma",
+  "ru": "Не уходи",
+  "literal_ru": "идти не (делай)",
+  "register": "casual (반말)",
+  "note_ru": "가다 «идти, уходить» + -지 마; одна из самых частых строк припева."
+ },
+ {
+  "phrase": "떠나지 마",
+  "romanization": "tteonaji ma",
+  "ru": "Не покидай меня",
+  "literal_ru": "покидать не (делай)",
+  "register": "casual (반말)",
+  "note_ru": "떠나다 «уезжать, покидать» — эмоционально сильнее, чем 가지 마."
+ },
+ {
+  "phrase": "울지 마",
+  "romanization": "ulji ma",
+  "ru": "Не плачь",
+  "literal_ru": "плакать не (делай)",
+  "register": "casual (반말)",
+  "note_ru": "울다 «плакать»; ㄹ сохраняется перед -지."
+ },
+ {
+  "phrase": "내 곁에",
+  "romanization": "nae gyeote",
+  "ru": "Рядом со мной",
+  "literal_ru": "у моего бока",
+  "register": "poetic",
+  "note_ru": "곁 «близость, бок» + -에; обычно продолжается 내 곁에 있어 «будь рядом»."
+ },
+ {
+  "phrase": "네 곁에",
+  "romanization": "ne gyeote",
+  "ru": "Рядом с тобой",
+  "literal_ru": "у твоего бока",
+  "register": "poetic",
+  "note_ru": "네 «твой»; в песнях часто поют как 니 곁에 (ни), чтобы отличить от 내."
+ },
+ {
+  "phrase": "내 옆에",
+  "romanization": "nae yeope",
+  "ru": "Рядом со мной (сбоку)",
+  "literal_ru": "у моего бока",
+  "register": "casual (반말) / poetic",
+  "note_ru": "옆 «бок, рядом» + -에; конкретнее и бытовее, чем поэтичное 곁."
+ },
+ {
+  "phrase": "함께 하자",
+  "romanization": "hamkke haja",
+  "ru": "Давай будем вместе",
+  "literal_ru": "вместе давай-делать",
+  "register": "casual (반말)",
+  "note_ru": "함께 «вместе» + 하다 + -자 «давай (сделаем)»."
+ },
+ {
+  "phrase": "나를 봐",
+  "romanization": "nareul bwa",
+  "ru": "Посмотри на меня",
+  "literal_ru": "меня смотри",
+  "register": "casual (반말)",
+  "note_ru": "나 + -를 (объект) + 보다 → 봐; вежливо 나를 봐요."
+ },
+ {
+  "phrase": "나만 봐",
+  "romanization": "naman bwa",
+  "ru": "Смотри только на меня",
+  "literal_ru": "меня-только смотри",
+  "register": "casual (반말)",
+  "note_ru": "-만 «только»; ревниво-нежный оттенок."
+ },
+ {
+  "phrase": "손잡아",
+  "romanization": "sonjaba",
+  "ru": "Возьми меня за руку",
+  "literal_ru": "руку возьми",
+  "register": "casual (반말)",
+  "note_ru": "손 «рука» + 잡다 «хватать» → 손잡다 «держаться за руки»."
+ },
+ {
+  "phrase": "안아 줘",
+  "romanization": "ana jwo",
+  "ru": "Обними меня",
+  "literal_ru": "обняв дай",
+  "register": "casual (반말)",
+  "note_ru": "안다 «обнимать» + -아 줘 «сделай для меня»."
+ },
+ {
+  "phrase": "사랑한다 말할까",
+  "romanization": "saranghanda malhalkka",
+  "ru": "Сказать ли, что люблю?",
+  "literal_ru": "«люблю» сказать-ли",
+  "register": "poetic",
+  "note_ru": "사랑한다 (прямая речь) + 말하다 + -ㄹ까 «может, ...?, сказать ли?»."
+ },
+ {
+  "phrase": "너뿐이야",
+  "romanization": "neoppuniya",
+  "ru": "Ты — единственный(ая)",
+  "literal_ru": "только ты есть",
+  "register": "casual (반말)",
+  "note_ru": "너 + -뿐 «только» + 이야 (связка); вежливо 너뿐이에요."
+ },
+ {
+  "phrase": "너밖에 없어",
+  "romanization": "neo bakke eopseo",
+  "ru": "Кроме тебя никого нет",
+  "literal_ru": "тебя-кроме нет",
+  "register": "casual (반말)",
+  "note_ru": "-밖에 требует отрицания (없다) и даёт смысл «только ты»."
+ },
+ {
+  "phrase": "다시 만나",
+  "romanization": "dasi manna",
+  "ru": "Встретимся снова",
+  "literal_ru": "снова встреть(ся)",
+  "register": "casual (반말)",
+  "note_ru": "다시 «снова» + 만나다; по контексту — приказ или обещание встречи."
+ },
+ {
+  "phrase": "영원히",
+  "romanization": "yeongwonhi",
+  "ru": "Навсегда, вечно",
+  "literal_ru": "вечно",
+  "register": "poetic",
+  "note_ru": "영원 «вечность» + -히 (суффикс наречия)."
+ },
+ {
+  "phrase": "언제나",
+  "romanization": "eonjena",
+  "ru": "Всегда",
+  "literal_ru": "когда бы (ни)",
+  "register": "poetic",
+  "note_ru": "Синоним 늘/항상, но чуть литературнее и мягче."
+ },
+ {
+  "phrase": "늘 그대로",
+  "romanization": "neul geudaero",
+  "ru": "Всегда таким же, как прежде",
+  "literal_ru": "всегда так-как-есть",
+  "register": "poetic",
+  "note_ru": "늘 «всегда» + 그대로 «как есть, без изменений»."
+ },
+ {
+  "phrase": "그대여",
+  "romanization": "geudaeyeo",
+  "ru": "О, любимый(ая)",
+  "literal_ru": "любимый — о!",
+  "register": "poetic",
+  "note_ru": "그대 (поэтич. «ты») + звательное -여; встречается только в песнях и стихах."
+ },
+ {
+  "phrase": "나의 그대",
+  "romanization": "naui geudae",
+  "ru": "Мой любимый / моя любимая",
+  "literal_ru": "мой(-я) любимый(-ая)",
+  "register": "poetic",
+  "note_ru": "나의 «мой» (книжная форма от 내) + 그대; в живой речи так не говорят."
+ },
+ {
+  "phrase": "우리 다시",
+  "romanization": "uri dasi",
+  "ru": "Мы снова (начнём)",
+  "literal_ru": "мы снова",
+  "register": "casual (반말) / poetic",
+  "note_ru": "Обрывок фразы 우리 다시 시작하자 «давай мы начнём заново»; 우리 «мы/наш»."
+ },
+ {
+  "phrase": "이 밤이",
+  "romanization": "i bami",
+  "ru": "Эта ночь…",
+  "literal_ru": "эта ночь-(подлежащее)",
+  "register": "poetic",
+  "note_ru": "이 «этот» + 밤 «ночь» + -이; часто 이 밤이 지나면 «когда пройдёт эта ночь»."
+ },
+ {
+  "phrase": "별처럼",
+  "romanization": "byeolcheoreom",
+  "ru": "Как звезда / словно звёзды",
+  "literal_ru": "звезда-подобно",
+  "register": "poetic",
+  "note_ru": "별 «звезда» + -처럼 «как, подобно»."
+ },
+ {
+  "phrase": "꽃처럼",
+  "romanization": "kkotcheoreom",
+  "ru": "Как цветок",
+  "literal_ru": "цветок-подобно",
+  "register": "poetic",
+  "note_ru": "꽃 «цветок» + -처럼; частый образ красоты и хрупкости."
+ },
+ {
+  "phrase": "꿈처럼",
+  "romanization": "kkumcheoreom",
+  "ru": "Как во сне / словно мечта",
+  "literal_ru": "сон-подобно",
+  "register": "poetic",
+  "note_ru": "꿈 «сон, мечта» + -처럼; 꿈 значит и «сон», и «мечта»."
+ },
+ {
+  "phrase": "눈부신",
+  "romanization": "nunbusin",
+  "ru": "Ослепительный, сияющий",
+  "literal_ru": "глаза-слепящий",
+  "register": "poetic",
+  "note_ru": "눈부시다 «быть ослепительным» + -ㄴ (причастие-определение к существительному)."
+ },
+ {
+  "phrase": "아름다운 너",
+  "romanization": "areumdaun neo",
+  "ru": "Прекрасный(ая) ты",
+  "literal_ru": "красивый ты",
+  "register": "poetic",
+  "note_ru": "아름답다 (ㅂ-неправ.) → 아름다운 (определение) + 너."
+ },
+ {
+  "phrase": "마지막처럼",
+  "romanization": "majimakcheoreom",
+  "ru": "Как в последний раз",
+  "literal_ru": "последний-раз-подобно",
+  "register": "poetic",
+  "note_ru": "마지막 «последний (раз)» + -처럼; ср. известный хит «마지막처럼»."
+ },
+ {
+  "phrase": "처음처럼",
+  "romanization": "cheoeumcheoreom",
+  "ru": "Как впервые / как в начале",
+  "literal_ru": "начало-подобно",
+  "register": "poetic",
+  "note_ru": "처음 «первый раз, начало» + -처럼."
+ },
+ {
+  "phrase": "함께라면",
+  "romanization": "hamkkeramyeon",
+  "ru": "Если мы вместе",
+  "literal_ru": "вместе-если",
+  "register": "poetic",
+  "note_ru": "함께 + (이)라면 «если это…»; условие «лишь бы вместе»."
+ },
+ {
+  "phrase": "없이는 못 살아",
+  "romanization": "eopsineun mot sara",
+  "ru": "Без тебя мне не жить",
+  "literal_ru": "без — не могу жить",
+  "register": "casual (반말)",
+  "note_ru": "-없이 «без» + 못 «не мочь» + 살다; подразумевается 너 없이는."
+ },
+ {
+  "phrase": "기억해 줘",
+  "romanization": "gieokhae jwo",
+  "ru": "Помни (обо мне)",
+  "literal_ru": "помня дай",
+  "register": "casual (반말)",
+  "note_ru": "기억하다 «помнить» + -해 줘 «сделай для меня»."
+ },
+ {
+  "phrase": "믿어 줘",
+  "romanization": "mideo jwo",
+  "ru": "Поверь мне",
+  "literal_ru": "поверив дай",
+  "register": "casual (반말)",
+  "note_ru": "믿다 «верить» + -어 줘; просьба о доверии."
+ },
+ {
+  "phrase": "사랑했어",
+  "romanization": "saranghaesseo",
+  "ru": "Я любил(а) тебя",
+  "literal_ru": "любил(-)",
+  "register": "casual (반말)",
+  "note_ru": "사랑하다 + прош. вр. -았/었어; часто об ушедшей любви."
+ },
+ {
+  "phrase": "사랑하니까",
+  "romanization": "saranghanikka",
+  "ru": "Потому что люблю",
+  "literal_ru": "люблю-потому-что",
+  "register": "casual (반말)",
+  "note_ru": "-(으)니까 «потому что»; причина, оправдание чувства."
+ },
+ {
+  "phrase": "널 사랑해",
+  "romanization": "neol saranghae",
+  "ru": "Люблю тебя",
+  "literal_ru": "тебя люблю",
+  "register": "casual (반말)",
+  "note_ru": "널 = 너를 (стяжение объекта); чувство названо прямо."
+ },
+ {
+  "phrase": "내 사랑",
+  "romanization": "nae sarang",
+  "ru": "Любовь моя",
+  "literal_ru": "моя любовь",
+  "register": "poetic",
+  "note_ru": "내 «мой» + 사랑; обращение к возлюбленному."
+ },
+ {
+  "phrase": "그리워(요)",
+  "romanization": "geuriwo(yo)",
+  "ru": "Тоскую / так по тебе скучаю",
+  "literal_ru": "тоскую",
+  "register": "casual (반말) / polite (존댓말)",
+  "note_ru": "그립다 (ㅂ-неправ.) → 그리워; тоска по человеку или прошлому."
+ },
+ {
+  "phrase": "보고 싶었어",
+  "romanization": "bogo sipeosseo",
+  "ru": "Я так по тебе соскучился(ась)",
+  "literal_ru": "видеть хотел(-)",
+  "register": "casual (반말)",
+  "note_ru": "-고 싶다 в прошедшем времени; «я скучал»."
+ },
+ {
+  "phrase": "놓지 마",
+  "romanization": "nochi ma",
+  "ru": "Не отпускай",
+  "literal_ru": "отпускать не (делай)",
+  "register": "casual (반말)",
+  "note_ru": "놓다 «отпускать, класть» + -지 마; часто о руке или о любви."
+ },
+ {
+  "phrase": "잡아 줘",
+  "romanization": "jaba jwo",
+  "ru": "Удержи меня",
+  "literal_ru": "схватив дай",
+  "register": "casual (반말)",
+  "note_ru": "잡다 «хватать, держать» + -아 줘; «не дай мне уйти»."
+ },
+ {
+  "phrase": "사랑할게(요)",
+  "romanization": "saranghalge(yo)",
+  "ru": "Я буду любить тебя",
+  "literal_ru": "любить-буду (обещаю)",
+  "register": "casual (반말) / polite (존댓말)",
+  "note_ru": "-(으)ㄹ게 — обещание, намерение говорящего."
+ },
+ {
+  "phrase": "함께 있어 줘",
+  "romanization": "hamkke isseo jwo",
+  "ru": "Останься со мной",
+  "literal_ru": "вместе будь-дай",
+  "register": "casual (반말)",
+  "note_ru": "있다 «быть, находиться» + -어 줘; просьба «будь рядом ради меня»."
+ },
+ {
+  "phrase": "내 사람",
+  "romanization": "nae saram",
+  "ru": "Мой человек / моя половинка",
+  "literal_ru": "мой человек",
+  "register": "casual (반말) / poetic",
+  "note_ru": "사람 «человек»; в песнях — «мой любимый, свой, родной»."
+ },
+ {
+  "phrase": "너를 위해",
+  "romanization": "neoreul wihae",
+  "ru": "Ради тебя / для тебя",
+  "literal_ru": "тебя ради",
+  "register": "poetic",
+  "note_ru": "-를 위해(서) «ради, для»."
+ },
+ {
+  "phrase": "너 때문에",
+  "romanization": "neo ttaemune",
+  "ru": "Из-за тебя",
+  "literal_ru": "тебя из-за",
+  "register": "casual (반말)",
+  "note_ru": "때문에 «из-за»; и упрёк, и признание («всё из-за тебя»)."
+ },
+ {
+  "phrase": "내 맘",
+  "romanization": "nae mam",
+  "ru": "Моё сердце / мои чувства",
+  "literal_ru": "моё сердце (разг.)",
+  "register": "casual (반말)",
+  "note_ru": "맘 = 마음 (стяжение) «душа, сердце, чувства»."
+ },
+ {
+  "phrase": "두근두근",
+  "romanization": "dugeundugeun",
+  "ru": "Тук-тук (сердце колотится)",
+  "literal_ru": "тук-тук",
+  "register": "casual (반말)",
+  "note_ru": "Ономатопея биения сердца от волнения или влюблённости."
+ },
+ {
+  "phrase": "눈물이 나",
+  "romanization": "nunmuri na",
+  "ru": "Слёзы текут / я плачу",
+  "literal_ru": "слёзы выходят",
+  "register": "casual (반말)",
+  "note_ru": "눈물 «слёзы» + 나다 «появляться»; о непроизвольных слезах."
+ },
+ {
+  "phrase": "가슴이 아파",
+  "romanization": "gaseumi apa",
+  "ru": "Сердце болит / больно в груди",
+  "literal_ru": "грудь болит",
+  "register": "casual (반말)",
+  "note_ru": "가슴 «грудь, сердце» + 아프다 «болеть»; о душевной боли."
+ },
+ {
+  "phrase": "사랑에 빠졌어",
+  "romanization": "sarange ppajyeosseo",
+  "ru": "Я влюбился(ась)",
+  "literal_ru": "в любовь упал(-)",
+  "register": "casual (반말)",
+  "note_ru": "-에 빠지다 «упасть в = увлечься»; устойчивая идиома."
+ },
+ {
+  "phrase": "첫사랑",
+  "romanization": "cheotsarang",
+  "ru": "Первая любовь",
+  "literal_ru": "первая-любовь",
+  "register": "poetic",
+  "note_ru": "첫 «первый» + 사랑; сквозной мотив баллад."
+ },
+ {
+  "phrase": "다시 돌아와",
+  "romanization": "dasi dorawa",
+  "ru": "Вернись снова",
+  "literal_ru": "снова вернись",
+  "register": "casual (반말)",
+  "note_ru": "돌아오다 «возвращаться» → 돌아와 (приказ/просьба)."
+ },
+ {
+  "phrase": "돌아와 줘",
+  "romanization": "dorawa jwo",
+  "ru": "Вернись, прошу тебя",
+  "literal_ru": "вернувшись дай",
+  "register": "casual (반말)",
+  "note_ru": "-아 줘 добавляет мольбу «ради меня»."
+ },
+ {
+  "phrase": "기다릴게(요)",
+  "romanization": "gidarilge(yo)",
+  "ru": "Я буду ждать",
+  "literal_ru": "ждать-буду (обещаю)",
+  "register": "casual (반말) / polite (존댓말)",
+  "note_ru": "기다리다 «ждать» + -(으)ㄹ게 — обещание."
+ },
+ {
+  "phrase": "지켜 줄게",
+  "romanization": "jikyeo julge",
+  "ru": "Я тебя защищу / буду беречь",
+  "literal_ru": "защищая дам-буду",
+  "register": "casual (반말)",
+  "note_ru": "지키다 «беречь, защищать» + -어 줄게 «сделаю для тебя, обещаю»."
+ },
+ {
+  "phrase": "네가 필요해",
+  "romanization": "nega piryohae",
+  "ru": "Ты мне нужен(на)",
+  "literal_ru": "ты нужен-есть",
+  "register": "casual (반말)",
+  "note_ru": "필요하다 «быть нужным»; предмет нужды берёт -가/이. В песнях 네가 поют как «нига»."
+ },
+ {
+  "phrase": "너와 나",
+  "romanization": "neowa na",
+  "ru": "Ты и я",
+  "literal_ru": "ты-и я",
+  "register": "poetic",
+  "note_ru": "-와/과 «и, с»; частая строка и название песен."
+ },
+ {
+  "phrase": "우리 사랑",
+  "romanization": "uri sarang",
+  "ru": "Наша любовь",
+  "literal_ru": "наша любовь",
+  "register": "poetic",
+  "note_ru": "우리 «мы/наш» + 사랑."
+ },
+ {
+  "phrase": "그대 없이",
+  "romanization": "geudae eopsi",
+  "ru": "Без тебя (любимого)",
+  "literal_ru": "любимого без",
+  "register": "poetic",
+  "note_ru": "그대 (поэтич. «ты») + 없이 «без»."
+ },
+ {
+  "phrase": "내 품에",
+  "romanization": "nae pume",
+  "ru": "В моих объятиях",
+  "literal_ru": "в мои объятия",
+  "register": "poetic",
+  "note_ru": "품 «грудь, объятия» + -에; «в объятиях / в объятия»."
+ },
+ {
+  "phrase": "잊을 수 없어",
+  "romanization": "ijeul su eopseo",
+  "ru": "Не могу забыть",
+  "literal_ru": "забыть возможности нет",
+  "register": "casual (반말)",
+  "note_ru": "-(으)ㄹ 수 없다 «не мочь»; 잊다 «забыть»."
+ },
+ {
+  "phrase": "사랑밖에 난 몰라",
+  "romanization": "sarang bakke nan molla",
+  "ru": "Кроме любви я ничего не знаю",
+  "literal_ru": "любви-кроме я не-знаю",
+  "register": "poetic",
+  "note_ru": "-밖에 + 모르다 (отрицание) = «только любовь»; крылатая строка тро́та."
+ },
+ {
+  "phrase": "하늘만큼",
+  "romanization": "haneulmankeum",
+  "ru": "Как небо (велико) / безмерно",
+  "literal_ru": "небо-настолько-как",
+  "register": "poetic",
+  "note_ru": "-만큼 «настолько же, как»; часто в паре 하늘만큼 땅만큼."
+ },
+ {
+  "phrase": "영원토록",
+  "romanization": "yeongwontorok",
+  "ru": "На веки вечные",
+  "literal_ru": "вплоть до вечности",
+  "register": "poetic",
+  "note_ru": "영원 «вечность» + -토록 «вплоть до»; книжно-песенная форма 영원히."
+ }
+]

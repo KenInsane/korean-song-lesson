@@ -1,0 +1,9 @@
+* text=auto
+*.wasm binary
+*.knlm binary
+*.morph binary
+*.mdl binary
+*.dict binary
+*.txt binary
+*.png binary
+model/** binary
