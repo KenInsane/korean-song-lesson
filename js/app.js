@@ -3,7 +3,7 @@ import { KiwiBuilder, Match } from '../lib/index.js';
 import { createAnalyzer } from './analyzer.js';
 import { buildLesson } from './lesson.js';
 import { renderLesson, ankiTsv } from './render.js';
-import { LESSON_CSS } from './style.js';
+import { LESSON_CSS } from './style.js?v=2';
 
 const $ = (id) => document.getElementById(id);
 // «Тонкая» модель (~39 МБ): без словарей имён собственных (default.dict/multi.dict) —
@@ -55,11 +55,10 @@ async function init() {
 
   wireUi();
 
-  // Service worker временно ОТКЛЮЧЁН на время отладки доставки на хостинге
-  // (чистка возможного старого SW делается в index.html). Вернём офлайн, когда база заработает.
-  // if ('serviceWorker' in navigator) {
-  //   try { navigator.serviceWorker.register('./sw.js'); } catch (e) { /* ignore */ }
-  // }
+  // Service worker: свежий код (network-first без кэша) + офлайн после первой загрузки.
+  if ('serviceWorker' in navigator) {
+    try { navigator.serviceWorker.register('./sw.js?v=3'); } catch (e) { /* ignore */ }
+  }
 
   // база данных для разбора
   lmsg('Загружаю словари…');

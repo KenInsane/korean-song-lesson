@@ -114,27 +114,6 @@ window.addEventListener('unhandledrejection', function (e) {
   var r = e && e.reason; window.__kslErr('promise: ' + ((r && (r.stack || r.message)) || r || '?'));
 });
 
-// (0) Лечим залипший service worker от прошлых заливок (частая причина «сеть/ошибка»):
-//     сносим все SW + кэши и ОДИН раз перезагружаемся — дальше страница работает без SW.
-(function cleanupSW() {
-  try {
-    if (!('serviceWorker' in navigator) || !navigator.serviceWorker.getRegistrations) return;
-    navigator.serviceWorker.getRegistrations().then(function (rs) {
-      var hadSW = rs.length > 0 || (navigator.serviceWorker.controller != null);
-      if (hadSW && !sessionStorage.getItem('ksl_swclean')) {
-        sessionStorage.setItem('ksl_swclean', '1');
-        var el = document.getElementById('loading-msg'); if (el) el.textContent = 'Чиню кэш…';
-        Promise.all(rs.map(function (r) { return r.unregister(); })).then(function () {
-          var done = function () { location.reload(); };
-          if (window.caches && caches.keys) {
-            caches.keys().then(function (ks) { return Promise.all(ks.map(function (k) { return caches.delete(k); })); }).then(done, done);
-          } else { done(); }
-        }, done);
-      }
-    }).catch(function () {});
-  } catch (e) { /* ignore */ }
-})();
-
 // Сторож: если app.js не запустился за 7 сек — показываем настоящую причину.
 window.__kslBooted = false;
 setTimeout(function () {
@@ -191,6 +170,6 @@ setTimeout(function () {
   <div class="foot">KoreanSongLesson · разбор корейского в браузере (Kiwi WASM)</div>
 </div>
 
-<script type="module" src="./js/app.js"></script>
+<script type="module" src="./js/app.js?v=2"></script>
 </body>
 </html>
