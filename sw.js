@@ -2,7 +2,7 @@
 // КОД/ДАННЫЕ (html/js/json/css/шрифты/иконки): network-first БЕЗ HTTP-кэша —
 //   всегда берём свежую версию (обходит 10-мин кэш GitHub Pages), офлайн — из Cache Storage.
 // ТЯЖЁЛОЕ (wasm + модель Kiwi): cache-first — не перекачиваем 35 МБ.
-const CACHE = 'ksl-mobile-v3';
+const CACHE = 'ksl-mobile-v4';
 
 const isHeavy = (url) => url.pathname.includes('/model/') || url.pathname.endsWith('.wasm');
 
